@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import './App.css';
+
 
 
 const Image360Viewer = ({data}) => {
