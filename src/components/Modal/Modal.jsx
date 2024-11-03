@@ -1,26 +1,18 @@
-// components/Modal.jsx
 import React from 'react';
+import './Modal.css';
 
-const Modal = ({ isOpen, closeImage, currentImage }) => {
+const Modal = ({ isOpen, closeImage, currentImage, prevImage, nextImage }) => {
   if (!isOpen) return null;
 
   return (
-    <div
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        backgroundColor: 'rgba(0, 0, 0, 0.8)',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        zIndex: 1000
-      }}
-      onClick={closeImage}
-    >
-      <img src={currentImage} alt="Full screen view" style={{ maxWidth: '90%', maxHeight: '90%' }} />
+    <div className="modalOverlay" onClick={closeImage}>
+      <div className="modalContent" onClick={(e) => e.stopPropagation()}>
+        <button className="closeButton" onClick={closeImage}>×</button>
+        
+        <button className="prevButton" onClick={prevImage}>⟨</button>
+        <img src={currentImage} alt="Selected" className="modalImage" />
+        <button className="nextButton" onClick={nextImage}>⟩</button>
+      </div>
     </div>
   );
 };

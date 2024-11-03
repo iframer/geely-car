@@ -1,16 +1,16 @@
-// components/ImageViewer.jsx
 import React from 'react';
+import './ImageViewer.css';
 
 const ImageViewer = ({ images, openImage }) => {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center' }}>
+    <div className="ImageViewer">
       {images.map((img, index) => (
         <img
+          className="imageViewerImage"
           key={index}
           src={img}
           alt={`Additional view ${index}`}
-          onClick={() => openImage(img)}
-          style={{ width: '10%', margin: '0', cursor: 'pointer' }}
+          onClick={() => openImage(index)}
         />
       ))}
     </div>

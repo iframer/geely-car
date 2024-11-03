@@ -1,0 +1,42 @@
+.viewer-container {
+    position: relative;
+    margin: 40px 0;
+}
+
+.viewer {
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    margin: 0px;
+    width: 45vw; /* или установите фиксированную ширину */
+    height: 45vh; /* установите желаемую высоту */
+}
+
+.garantCarImage {
+    align-self: flex-end;
+    display: flex;
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+}
+
+.garantCarImage img {
+    width: 150px;
+    border-radius: 15px;
+}
+
+.color-selector {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;    
+    transform: translateX(-50%);
+}
+
+.color-selector button {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    margin: 0px 8px;
+}
