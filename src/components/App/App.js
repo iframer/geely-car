@@ -10,7 +10,6 @@ const App = () => {
     <div>
       <div style={{display: 'flex'}}>
         <CarInfoLeft/>
-        <CarInfoRight/>
         </div>
     </div>
   );

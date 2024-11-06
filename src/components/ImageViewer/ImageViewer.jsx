@@ -5,13 +5,16 @@ const ImageViewer = ({ images, openImage }) => {
   return (
     <div className="ImageViewer">
       {images.map((img, index) => (
-        <img
-          className="imageViewerImage"
-          key={index}
-          src={img}
-          alt={`Additional view ${index}`}
-          onClick={() => openImage(index)}
-        />
+        <div className="imageCollector" key={index}>
+          <img
+            className={`imageViewerImage ${
+              index === 0 ? 'first' : index === images.length - 1 ? 'last' : ''
+            }`}
+            src={img}
+            alt={`Additional view ${index}`}
+            onClick={() => openImage(index)}
+          />
+        </div>
       ))}
     </div>
   );

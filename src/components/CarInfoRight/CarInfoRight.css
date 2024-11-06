@@ -1,6 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .CarInfoRight{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
+    gap: 2vh;
+}
+
+.CarInfoRight h2{
+    font-size: 4.5vh;
+}
+
+.CarInfoRight h3{
+    font-size: 2.8vh;
+}
+
+.CarInfoRight ul li{
+    list-style: none;
+    font-size: 3.3vh;
+    display: flex; /* Устанавливаем flex для всех элементов списка */
+    align-items: center; /* Выравниваем элементы по центру по вертикали */
+    gap: 10px; /* Добавляем небольшой промежуток между изображением и текстом */
+    margin: 1vh 0;
+    position: relative;
+}
+
+
+
+.CarInfoRight button{
+    width: 22vw;
+    padding:2.2vh 0;
+    font-size: 2.5vh;
+    border-radius: 15px;
+    margin: 1vh 0;
+    cursor: pointer;
+}
+
+.CarInfoRight ul li img{
+    height: 5.5vh;
+    width: 4vw;    
+}
+
+.circleForAnimation {
+    position: absolute; /* Открепляем от потока документа */
+    left: 15px; /* Позиционируем по левому краю (можно отрегулировать) */
+    top: 50%; /* Центрируем по вертикали относительно родителя */
+    transform: translateY(-50%); /* Точное центрирование по вертикали */
+    height:3.8vh;
+    width: 1.9vw;
+    background-color: #238fdb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
     align-items: center;
+}
+
+@keyframes rotateRight {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.rotateImg {
+    animation: rotateRight 3s linear infinite; /* Вращение картинки */
+    width: 100%; /* Убедитесь, что изображение занимает весь круг */
+}
+
+
+
+.CarInfoRight .btn1{
+    background-color: #02233b;
+    color: #fff;
+}
+
+.CarInfoRight .btn2{
+    color: #02233b;
+    font-weight: 500;
+    border-width: 3px;
+    background-color: #ffffff;
+    background-position: center center;
+    border-color: #02233b;
+    border-style: solid;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+
+
+.CarInfoRight .btn3{
+    background-color: #0067b2;
+    color: #fff;
+    outline: none;
+    border: none;
 }

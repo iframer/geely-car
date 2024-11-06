@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Image360Viewer.css';
-import { div } from 'three/webgpu';
 
 const Image360Viewer = ({ images }) => {
     const [currentFrame, setCurrentFrame] = useState(0);
