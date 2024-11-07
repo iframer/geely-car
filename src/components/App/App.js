@@ -3,6 +3,7 @@ import CarInfoLeft from '../CarInfoLeft/CarInfoLeft';
 import CarInfoRight from '../CarInfoRight/CarInfoRight';
 import Header from '../Header/Header';
 import UnderHeader from '../UnderHeader/UnderHeader';
+import Slider from '../SliderImage/Slider';
 
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
       <div>
         <Header/>
         <UnderHeader/>
+        <Slider/>
     {/* <CarInfoLeft/> */}
         </div>
     </div>
