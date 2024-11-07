@@ -11,7 +11,7 @@ const App = () => {
     <div>
       <div>
         <Header/>
-    {/* <CarInfoLeft/> */}
+    <CarInfoLeft/>
         </div>
     </div>
   );
