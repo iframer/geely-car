@@ -1,34 +1,60 @@
+.mainHeader {
+  padding: 4vh 25vh;
+  background-color: #f2f2f2;
+}
+
+.mainHeader ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .mainHeader ul li {
   list-style: none;
   font-size: 2.3vh;
   color: rgb(21, 21, 21);
   font-weight: 500;
-}
-
-.mainHeader ul{
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  text-align: center;
 }
 
-.mainHeader .orbisLogo,.geelyLogo{
-  width: 11.5vw;
-  height: 3.5vh;
+.mainHeader .orbisLogo, .geelyLogo {
+  width: 10.5vw;
+  height: 3.3vh;
 }
 
-.mainHeader ul li a{
+.mainHeader ul li a {
   text-decoration: none;
   color: rgb(21, 21, 21);
-}
-
-.mainHeader ul li a img{
-  width: 3vw;
-  height: 3vh;
-}
-
-.mainHeader ul li .phoneLogo{
-  width: 3vw;
-  height: 3vh;
   display: flex;
-  justify-content: center;
+  /* justify-content: space-between; */
+}
+
+.mainHeader ul li a img {
+  width: 3vw;
+  height: 3vh;
+}
+
+.mainHeader ul li .phoneLogo {
+  width: 3vw;
+  height: 3vh;
+}
+
+
+.mainHeader ul li button {
+  padding: 1.3vh 1.9vw;
+  border-radius: 7px;
+  font-size: 2vh;
+  font-weight: 500;
+  border: 3px solid #0067b2;
+  color: #0067b2;
+  outline: #0067b2;
+  cursor: pointer;
+}
+
+.mainHeader ul li:last-child {
+  display: flex;
   align-items: center;
+  gap: 0.5vw;
 }

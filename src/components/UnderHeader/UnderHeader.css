@@ -1,0 +1,18 @@
+.UnderHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 1vh 25vh;
+    background-color: antiquewhite;
+}
+
+.UnderHeader ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+}
+
+.UnderHeader ul li{
+    list-style: none;
+    font-size: 2vh;
+    
+}

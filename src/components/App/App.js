@@ -2,6 +2,7 @@ import React from 'react';
 import CarInfoLeft from '../CarInfoLeft/CarInfoLeft';
 import CarInfoRight from '../CarInfoRight/CarInfoRight';
 import Header from '../Header/Header';
+import UnderHeader from '../UnderHeader/UnderHeader';
 
 
 const App = () => {
@@ -11,7 +12,8 @@ const App = () => {
     <div>
       <div>
         <Header/>
-    <CarInfoLeft/>
+        <UnderHeader/>
+    {/* <CarInfoLeft/> */}
         </div>
     </div>
   );

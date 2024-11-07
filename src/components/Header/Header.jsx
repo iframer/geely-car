@@ -22,7 +22,7 @@ const Header = () => {
         <li>
           <button>Заказать звонок</button>
           </li>
-        <li>
+        <li style={{display : 'flex', gap : '0.5vw'}}>
           <p><a href="">RU</a></p>
           <p><a href="">KZ</a></p>
         </li>
