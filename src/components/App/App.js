@@ -1,6 +1,7 @@
 import React from 'react';
 import CarInfoLeft from '../CarInfoLeft/CarInfoLeft';
 import CarInfoRight from '../CarInfoRight/CarInfoRight';
+import Header from '../Header/Header';
 
 
 const App = () => {
@@ -8,8 +9,9 @@ const App = () => {
 
   return (
     <div>
-      <div style={{display: 'flex'}}>
-        <CarInfoLeft/>
+      <div>
+        <Header/>
+    {/* <CarInfoLeft/> */}
         </div>
     </div>
   );

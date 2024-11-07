@@ -17,6 +17,7 @@ const CarInfoRight = (props) => {
     <div style={{display : 'flex', alignItems: 'center'}}>
         <div className="circleForAnimation">
         </div>
+        
         <img src="https://static.tildacdn.pro/tild3633-6432-4664-b362-653733383133/pepicons-print_arrow.svg" alt="" className='rotateImg'/>
         Купить в трейд-ин
     </div>

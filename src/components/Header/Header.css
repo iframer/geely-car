@@ -1,0 +1,80 @@
+/* Основные стили для header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .logo h1 {
+    margin: 0;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav li {
+    margin: 0;
+  }
+  
+  .nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  /* Стили для кнопки меню на мобильных устройствах */
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+  }
+  
+  /* Адаптивное меню для мобильных устройств */
+  @media (max-width: 768px) {
+    .nav {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: #333;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      display: none;
+    }
+  
+    .nav.open {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: flex;
+    }
+  
+    .nav a {
+      padding: 1rem;
+      font-size: 1.5rem;
+    }
+  }
+  
