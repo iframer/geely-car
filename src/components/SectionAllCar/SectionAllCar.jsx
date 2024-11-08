@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './SectionAllCar.css';
 
-// Пример данных для автомобилей
 const carsData = [
   { id: 1, model: 'Coolray', trim: 'Standard', specs: '1.5T, 7DCT, 177л.с', image: 'coolray-standard.jpg' },
   { id: 2, model: 'Coolray', trim: 'Comfort', specs: '1.5T, 7DCT, 177л.с', image: 'coolray-comfort.jpg' },
@@ -9,58 +8,177 @@ const carsData = [
   { id: 4, model: 'Coolray', trim: 'Flagship', specs: '1.5T, 7DCT, 177л.с', image: 'coolray-flagship.jpg' },
   { id: 5, model: 'Tugella', trim: 'Luxury', specs: '2.0T, 8AT, 238л.с', image: 'tugella-luxury.jpg' },
   { id: 6, model: 'Tugella', trim: 'Flagship', specs: '2.0T, 8AT, 238л.с', image: 'tugella-flagship.jpg' },
-  // Дополнительные автомобили для демонстрации кнопки "Load more"
 ];
 
 const SectionAllCar = () => {
-  const [selectedModel, setSelectedModel] = useState('');
-  const [selectedTrim, setSelectedTrim] = useState('');
-  const [visibleCarsCount, setVisibleCarsCount] = useState(4);
+  const [selectedModels, setSelectedModels] = useState([]);
+  const [selectedTrims, setSelectedTrims] = useState([]);
+  const [visibleCarsCount, setVisibleCarsCount] = useState(3);
+  const [isModelDropdownOpen, setIsModelDropdownOpen] = useState(false);
+  const [isTrimDropdownOpen, setIsTrimDropdownOpen] = useState(false);
 
-  // Фильтрация автомобилей на основе выбранных параметров
+  // Используем useRef для хранения ссылок на dropdowns
+  const modelDropdownRef = useRef(null);
+  const trimDropdownRef = useRef(null);
+
+  useEffect(() => {
+    // Обработчик клика по всему документу
+    const handleClickOutside = (event) => {
+      if (modelDropdownRef.current && !modelDropdownRef.current.contains(event.target)) {
+        setIsModelDropdownOpen(false);
+      }
+      if (trimDropdownRef.current && !trimDropdownRef.current.contains(event.target)) {
+        setIsTrimDropdownOpen(false);
+      }
+    };
+
+    // Добавляем событие при монтировании компонента
+    document.addEventListener('click', handleClickOutside);
+
+    // Убираем событие при размонтировании компонента
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
+
+  const handleModelChange = (e) => {
+    const value = e.target.value;
+    setSelectedModels((prevModels) =>
+      prevModels.includes(value) ? prevModels.filter((model) => model !== value) : [...prevModels, value]
+    );
+    setVisibleCarsCount(3); // Сброс количества видимых машин при изменении фильтра
+  };
+
+  const handleTrimChange = (e) => {
+    const value = e.target.value;
+    setSelectedTrims((prevTrims) =>
+      prevTrims.includes(value) ? prevTrims.filter((trim) => trim !== value) : [...prevTrims, value]
+    );
+    setVisibleCarsCount(3); // Сброс количества видимых машин при изменении фильтра
+  };
+
+  const toggleModelDropdown = (event) => {
+    event.stopPropagation();  // Предотвращаем всплытие события
+    setIsModelDropdownOpen(!isModelDropdownOpen);
+  };
+  
+  const toggleTrimDropdown = (event) => {
+    event.stopPropagation();  // Предотвращаем всплытие события
+    setIsTrimDropdownOpen(!isTrimDropdownOpen);
+  };
+
+  const removeSelectedModel = (model) => {
+    setSelectedModels((prevModels) => prevModels.filter((m) => m !== model));
+  };
+
+  const removeSelectedTrim = (trim) => {
+    setSelectedTrims((prevTrims) => prevTrims.filter((t) => t !== trim));
+  };
+
   const filteredCars = carsData.filter(car =>
-    (selectedModel === '' || car.model === selectedModel) &&
-    (selectedTrim === '' || car.trim === selectedTrim)
+    (selectedModels.length === 0 || selectedModels.includes(car.model)) &&
+    (selectedTrims.length === 0 || selectedTrims.includes(car.trim))
   );
 
   const loadMoreCars = () => {
-    setVisibleCarsCount(prevCount => prevCount + 4);
+    setVisibleCarsCount((prevCount) => prevCount + 3);
   };
 
   return (
-    <div className="configurator-container">
-      <h1 className="configurator-title">Подобрать Комплектацию</h1>
+    <div className="section-all-car-container">
+      <h1 className="section-all-car-title">Подобрать Комплектацию</h1>
 
-      <div className="configurator-filters">
-        <div className="configurator-filter">
-          <label>Выберите модель:</label>
-          <select onChange={(e) => setSelectedModel(e.target.value)} value={selectedModel}>
-            <option value="">Все модели</option>
-            <option value="Coolray">Coolray</option>
-            <option value="Tugella">Tugella</option>
-          </select>
+      <div className="section-all-car-filters">
+        <div className="section-all-car-filter">
+          <button onClick={toggleModelDropdown} className="dropdown-button">
+            ВЫБЕРИТЕ МОДЕЛЬ
+          </button>
+          {isModelDropdownOpen && (
+            <div ref={modelDropdownRef} className="dropdown-menu">
+              <label>
+                <input
+                  type="checkbox"
+                  value="Coolray"
+                  checked={selectedModels.includes("Coolray")}
+                  onChange={handleModelChange}
+                />
+                Coolray
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  value="Tugella"
+                  checked={selectedModels.includes("Tugella")}
+                  onChange={handleModelChange}
+                />
+                Tugella
+              </label>
+            </div>
+          )}
         </div>
 
-        <div className="configurator-filter">
-          <label>Комплектация:</label>
-          <select onChange={(e) => setSelectedTrim(e.target.value)} value={selectedTrim}>
-            <option value="">Все комплектации</option>
-            <option value="Standard">Standard</option>
-            <option value="Comfort">Comfort</option>
-            <option value="Luxury">Luxury</option>
-            <option value="Flagship">Flagship</option>
-          </select>
+        <div className="section-all-car-filter">
+          <button onClick={toggleTrimDropdown} className="dropdown-button">
+            КОМПЛЕКТАЦИЯ
+          </button>
+          {isTrimDropdownOpen && (
+            <div ref={trimDropdownRef} className="dropdown-menu">
+              <label>
+                <input
+                  type="checkbox"
+                  value="Standard"
+                  checked={selectedTrims.includes("Standard")}
+                  onChange={handleTrimChange}
+                />
+                Standard
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  value="Comfort"
+                  checked={selectedTrims.includes("Comfort")}
+                  onChange={handleTrimChange}
+                />
+                Comfort
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  value="Luxury"
+                  checked={selectedTrims.includes("Luxury")}
+                  onChange={handleTrimChange}
+                />
+                Luxury
+              </label>
+              <label>
+                <input
+                  type="checkbox"
+                  value="Flagship"
+                  checked={selectedTrims.includes("Flagship")}
+                  onChange={handleTrimChange}
+                />
+                Flagship
+              </label>
+            </div>
+          )}
         </div>
       </div>
 
-      {/* Отображение выбранной модели и комплектации */}
       <div className="selected-filters">
-        {selectedModel && <span>Модель: {selectedModel}</span>}
-        {selectedTrim && <span>Комплектация: {selectedTrim}</span>}
+        {selectedModels.map((model) => (
+          <span key={model} className="selected-filter">
+            {model} <span className="remove-filter" onClick={() => removeSelectedModel(model)}>×</span>
+          </span>
+        ))}
+        {selectedTrims.map((trim) => (
+          <span key={trim} className="selected-filter">
+            {trim} <span className="remove-filter" onClick={() => removeSelectedTrim(trim)}>×</span>
+          </span>
+        ))}
       </div>
 
       <div>
-        {filteredCars.slice(0, visibleCarsCount).map(car => (
+        {filteredCars.slice(0, visibleCarsCount).map((car) => (
           <div key={car.id} className="car-card">
             <img src={car.image} alt={`${car.model} ${car.trim}`} />
             <div className="car-card-content">
@@ -73,10 +191,11 @@ const SectionAllCar = () => {
         ))}
       </div>
 
-      {/* Кнопка Load More остается видимой */}
-      <button onClick={loadMoreCars} className="load-more-button">
-        Load more
-      </button>
+      {filteredCars.length > visibleCarsCount && (
+        <button onClick={loadMoreCars} className="load-more-button">
+          Load more
+        </button>
+      )}
     </div>
   );
 };
