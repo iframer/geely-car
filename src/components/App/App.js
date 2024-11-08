@@ -4,6 +4,7 @@ import CarInfoRight from '../CarInfoRight/CarInfoRight';
 import Header from '../Header/Header';
 import UnderHeader from '../UnderHeader/UnderHeader';
 import Slider from '../SliderImage/Slider';
+import InfoSection from '../InfoSection/InfoSection';
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         <Header/>
         <UnderHeader/>
         <Slider/>
+        <InfoSection/>
     {/* <CarInfoLeft/> */}
         </div>
     </div>
