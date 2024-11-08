@@ -1,10 +1,12 @@
 .section-all-car-container {
     text-align: center;
+    height: 100vh;
   }
   
   .section-all-car-title {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 9vh;
+    margin-top: 5vh;
+    font-weight: 500;
   }
   
   .section-all-car-filters {
@@ -14,30 +16,97 @@
     margin: 20px 0;
   }
   
-  .dropdown-button {
+  .dropdownButton {
+    font-family: Arial, sans-serif;
+    font-size: 2.2vh;
+    font-weight: bold;
+    color: #002142;
     background: none;
     border: none;
-    font-size: 16px;
-    font-weight: bold;
     cursor: pointer;
+    position: relative;
+    padding-right: 20px;
+    margin-top: 5vh;
   }
+  
+  .dropdownButton::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent #02233b #02233b transparent;
+    position: absolute;
+    transform: rotate(45deg);
+    top: 50%;
+    right: 5px;
+    margin-top: -7px;
+    pointer-events: none;
+  }
+  
+
+  
   
   .dropdown-menu {
     position: absolute;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 5px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 12px 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    margin-top: 8px;
     z-index: 1;
-    max-width: 200px;
+    min-width: 12vw;
   }
   
   .dropdown-menu label {
-    display: block;
-    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    font-size: 2.3svh;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
   }
+  
+  
+  .dropdown-menu label input[type="checkbox"] {
+    appearance: none; /* Убираем стандартный стиль */
+    width: 20px; /* Устанавливаем ширину */
+    height: 20px; /* Устанавливаем высоту */
+    background-color: white; /* Цвет фона чекбокса */
+    border: 2px solid #333; /* Цвет и толщина рамки */
+    border-radius: 1px; /* Убираем закругления */
+    transform: scale(1.3); /* Увеличиваем размер */
+    margin-right: 0.7vw;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  /* Стиль для отмеченного состояния */
+  .dropdown-menu label input[type="checkbox"]:checked {
+    /* background-color: #007bff;
+    border-color: #007bff; */
+  }
+  
+  /* Добавляем галочку для отмеченного состояния */
+  .dropdown-menu label input[type="checkbox"]:checked::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 10px;
+    border: solid rgb(47, 47, 47);
+    border-width: 0 2px 2px 0;
+    top: 2px;
+    left: 6px;
+    transform: rotate(45deg);
+  }
+  
+  
+  .dropdown-menu label input[type="checkbox"]:checked {
+    accent-color: #323232; /* Цвет при активном чекбоксе */
+  }
+  
   
   .selected-filters {
     margin: 10px 0;
@@ -60,15 +129,25 @@
     font-weight: bold;
   }
   
-  
+  .car-cards{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+    padding: 0 25vh;
+  }
+
   .car-card {
     display: flex;
-    width: 850px;
-    margin: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    margin-bottom: -1px;
+    height: 19vh;
+    padding: 4vh 0vw;
+    border-top: 1px solid rgb(160, 160, 160); /* Верхняя граница */
+    border-bottom: 1px solid rgb(160, 160, 160); /* Нижняя граница */
+    border-left: none; /* Убираем левую границу */
+    border-right: none; /* Убираем правую границу */
     overflow: hidden;
     text-align: left;
+    justify-content: space-between;
   }
   
   .car-card-content {
@@ -76,37 +155,39 @@
   }
   
   .car-card-title {
-    font-size: 18px;
+    font-size: 3.2vh;
     font-weight: bold;
   }
   
   .car-card-specs {
-    font-size: 14px;
+    font-size: 2.2vh;
+    color: #8c8c8c;
   }
   
   .car-card-button {
-    margin: 10px;
-    padding: 8px 12px;
-    font-size: 14px;
+    background-color: #0067b2;
+    padding: 1vh 1vw;
+    height: 6vh;
+    font-size: 2vh;
     cursor: pointer;
     border: none;
-    border-radius: 4px;
+    border-radius: 13px;
     color: white;
-    background-color: #007bff;
   }
   
   .car-card-button-secondary {
-    background-color: #6c757d;
+    background-color: #02233b;
   }
   
   .load-more-button {
     margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 1vh 1vw;
+    height: 6vh;
+    font-size: 2vh;
     cursor: pointer;
     border: none;
-    border-radius: 4px;
-    background-color: #007bff;
+    border-radius: 13px;
+    background-color: #0067b2;
     color: white;
   }
   
