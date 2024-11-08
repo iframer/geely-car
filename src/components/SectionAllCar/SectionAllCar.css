@@ -1,0 +1,98 @@
+/* Основные стили для компонента */
+.configurator-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .configurator-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .configurator-filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .configurator-filter label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .configurator-filter select {
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  /* Стили для отображения выбранных параметров */
+  .selected-filters {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .selected-filters span {
+    margin-right: 15px;
+  }
+  
+  /* Стили для карточек автомобилей */
+  .car-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .car-card img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .car-card-content {
+    flex-grow: 1;
+  }
+  
+  .car-card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .car-card-specs {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Стили для кнопок */
+  .car-card-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 5px;
+  }
+  
+  .car-card-button-secondary {
+    background-color: #343a40;
+  }
+  
+  .load-more-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  

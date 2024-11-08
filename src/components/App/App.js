@@ -6,6 +6,7 @@ import UnderHeader from '../UnderHeader/UnderHeader';
 import Slider from '../SliderImage/Slider';
 import InfoSection from '../InfoSection/InfoSection';
 import CarModels from '../CarModels/CarModels';
+import SectionAllCar from '../SectionAllCar/SectionAllCar';
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
         <Slider/>
         <InfoSection/>
         <CarModels/>
+        <SectionAllCar/>
     {/* <CarInfoLeft/> */}
         </div>
     </div>
