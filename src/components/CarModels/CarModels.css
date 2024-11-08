@@ -1,0 +1,30 @@
+.CarModels ul li a img{
+    width: 17vw;
+    height: 52vh;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.CarModels ul li {
+    list-style: none;
+}
+
+.CarModels{
+    padding: 0vh 13vw;
+}
+
+.CarModels h1{
+    margin: 15vh 0 5vh 0;
+    font-size: 7vh;
+}
+
+
+.CarModels ul {
+    padding: 5vh 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.CarModels ul li:hover{
+
+}

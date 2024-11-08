@@ -5,6 +5,7 @@ import Header from '../Header/Header';
 import UnderHeader from '../UnderHeader/UnderHeader';
 import Slider from '../SliderImage/Slider';
 import InfoSection from '../InfoSection/InfoSection';
+import CarModels from '../CarModels/CarModels';
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
         <UnderHeader/>
         <Slider/>
         <InfoSection/>
+        <CarModels/>
     {/* <CarInfoLeft/> */}
         </div>
     </div>
