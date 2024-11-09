@@ -141,8 +141,8 @@
     margin-bottom: -1px;
     height: 19vh;
     padding: 4vh 0vw;
-    border-top: 1px solid rgb(160, 160, 160); /* Верхняя граница */
-    border-bottom: 1px solid rgb(160, 160, 160); /* Нижняя граница */
+    border-top: 1px solid rgb(199, 199, 199); /* Верхняя граница */
+    border-bottom: 1px solid rgb(199, 199, 199); /* Нижняя граница */
     border-left: none; /* Убираем левую границу */
     border-right: none; /* Убираем правую границу */
     overflow: hidden;

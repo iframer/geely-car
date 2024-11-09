@@ -8,6 +8,9 @@ const carsData = [
   { id: 4, model: 'Coolray', trim: 'Flagship', specs: '1.5T, 7DCT, 177л.с', image: 'https://optim.tildacdn.com/stor3562-6633-4839-a636-623537303831/-/resize/400x/-/format/webp/77486654.png' },
   { id: 5, model: 'Tugella', trim: 'Luxury', specs: '2.0T, 8AT, 238л.с', image: 'https://optim.tildacdn.com/stor3562-6633-4839-a636-623537303831/-/resize/400x/-/format/webp/77486654.png' },
   { id: 6, model: 'Tugella', trim: 'Flagship', specs: '2.0T, 8AT, 238л.с', image: 'https://optim.tildacdn.com/stor6366-3862-4431-b264-623234366439/-/resize/400x/-/format/webp/40730266.png' },
+  { id: 7, model: 'Tugella', trim: 'Luxury', specs: '2.0T, 8AT, 238л.с', image: 'https://optim.tildacdn.com/stor3562-6633-4839-a636-623537303831/-/resize/400x/-/format/webp/77486654.png' },
+  { id: 8, model: 'Tugella', trim: 'Flagship', specs: '2.0T, 8AT, 238л.с', image: 'https://optim.tildacdn.com/stor6366-3862-4431-b264-623234366439/-/resize/400x/-/format/webp/40730266.png' },
+
 ];
 
 const SectionAllCar = () => {
