@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 import CarRequest from '../CarRequest/CarRequest';
+import CarRequest2 from '../CarRequest2/CarRequest2';
+import Map from '../Map/Map';
 
 import './SectionAllCar.css';
 
@@ -219,8 +221,10 @@ const SectionAllCar = () => {
           Load more
         </button>
       )}
-      <div style={{ marginTop: '25vh' }}>
+      <div style={{ marginTop: '25vh'}}>
   <CarRequest />
+  <CarRequest2/>
+  <Map/>
 </div>
     </div>
   );

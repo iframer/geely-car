@@ -1,0 +1,11 @@
+.map-container {
+    width: 100%;
+    height: 600px; /* или любой другой размер */
+    position: relative;
+  }
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  

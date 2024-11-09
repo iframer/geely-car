@@ -7,7 +7,6 @@ import Slider from '../SliderImage/Slider';
 import InfoSection from '../InfoSection/InfoSection';
 import CarModels from '../CarModels/CarModels';
 import SectionAllCar from '../SectionAllCar/SectionAllCar';
-import CarRequest from '../CarRequest/CarRequest';
 
 
 const App = () => {
