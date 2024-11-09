@@ -1,4 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
+
+import CarRequest from '../CarRequest/CarRequest';
+
 import './SectionAllCar.css';
 
 const carsData = [
@@ -216,6 +219,9 @@ const SectionAllCar = () => {
           Load more
         </button>
       )}
+      <div style={{ marginTop: '25vh' }}>
+  <CarRequest />
+</div>
     </div>
   );
 };
