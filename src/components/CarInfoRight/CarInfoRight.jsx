@@ -30,7 +30,7 @@ const CarInfoRight = (props) => {
 </li>
 
             </ul>
-            <div>
+            <div style={{display : "flex", flexDirection : "column"}}>
                 <button className="btn1">Купить в кредит</button>
                 <button className="btn2">Обменять свой автомобиль на GEELY</button>
                 <button className="btn3">ТЕСТ-ДРАЙВ</button>

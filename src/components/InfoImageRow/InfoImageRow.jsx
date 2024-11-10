@@ -13,13 +13,13 @@ const InfoImageRow = ({ info }) => {
             src={item.image}
             alt={`Info view ${index}`}
             style={{
-              width: '60px',
-              height: '60px',
+              width: '3.5vw',
+              height: '7vh',
               borderRadius: '10px',
               marginBottom: '5px'
             }}
           />
-          <span style={{ textAlign: 'center', width: '140px' }}>{item.text}</span>
+          <span style={{ textAlign: 'center', width: '9vw',fontSize : '2.05vh' }}>{item.text}</span>
         </div>
       ))}
     </div>

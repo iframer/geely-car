@@ -111,7 +111,7 @@
   
   .selected-filters {
     margin: 10px 0;
-    font-size: 14px;
+    font-size: 18px;
   }
   
   .selected-filter {
@@ -119,14 +119,14 @@
     align-items: center;
     background-color: #f0f0f0;
     border-radius: 4px;
-    padding: 4px 8px;
+    padding: 5px 15px;
     margin: 0 5px;
   }
   
   .remove-filter {
     margin-left: 5px;
     cursor: pointer;
-    color: #d9534f;
+    color: #c73535;
     font-weight: bold;
   }
   
