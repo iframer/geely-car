@@ -65,8 +65,8 @@
 
 .SliderFormElements input {
   width: 20vw;
-  padding: 2vh;
-  font-size: 2.5vh;
+  padding: 2vh 2vw;
+  font-size: 3vh;
   border-radius: 13px;
   outline: none;
   border: none;
@@ -79,7 +79,6 @@
   border-radius: 5px;
   font-size: 10vh;
   width: 20vw;
-  padding-left: 50px;
   background-size: 25px 18px;
   background-position: 10px center;
   background-color: #fff;

@@ -8,7 +8,7 @@ const images = [
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [phone, setPhone] = useState('+7 ');
+  const [phone, setPhone] = useState('+7(___) ___-__-__');
 
   useEffect(() => {
     const interval = setInterval(() => {
