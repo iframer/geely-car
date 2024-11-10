@@ -1,0 +1,33 @@
+.phone-input-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 4px;
+    width: 250px;
+    background-color: white;
+  }
+  
+  .flag-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+  
+  .country-code {
+    margin-right: 8px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .phone-input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  .phone-input::placeholder {
+    color: #999;
+  }
+  

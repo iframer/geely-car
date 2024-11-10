@@ -1,63 +1,103 @@
 .slider {
-    position: relative;
-    width:85%;
-    margin: auto;
-    overflow: hidden;
-  }
-  
-  .slider-track {
-    display: flex;
-    transition: transform 0.5s ease;
-  }
-  
-  .slide {
-    min-width: 100%;
-    transition: opacity 0.5s ease;
-  }
-  
-  .slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
-  .slider-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 24px;
-    z-index: 10;
-  }
-  
-  .prev {
-    left: 10px;
-  }
-  
-  .next {
-    right: 10px;
-  }
-  
-  .dots {
-    text-align: center;
-  }
-  
-  .dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .dot.active {
-    background-color: #333;
-  }
-  
+  position: relative;
+  width: 85%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  transition: opacity 0.5s ease;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.SliderForm {
+  position: absolute;
+  bottom: 4%;
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+}
+
+.SliderForm p {
+  font-size: 4.3vh;
+  color: aliceblue;
+  margin: 0 3vw 1vh;
+  font-weight: 500;
+}
+
+.SliderFormElements {
+  display: flex;
+  margin: 0 3vw;
+  gap: 1.7vw;
+}
+
+.SliderFormElements input {
+  width: 20vw;
+  padding: 2vh;
+  font-size: 2.5vh;
+  border-radius: 13px;
+  outline: none;
+  border: none;
+}
+
+.phone-input {
+  font-family: Arial, sans-serif;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 10vh;
+  width: 20vw;
+  padding-left: 50px;
+  background-size: 25px 18px;
+  background-position: 10px center;
+  background-color: #fff;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2d/Flag_of_Kazakhstan.svg');
+  background-repeat: no-repeat;
+}
+
+.phone-input::placeholder {
+  color: #ccc;
+}
+
+.SliderFormElements button {
+  width: 17vw;
+  padding: 2vh;
+  font-size: 2.5vh;
+  border-radius: 13px;
+  outline: none;
+  border: none;
+  background-color: #0067b2;
+  color: #fff;
+}
