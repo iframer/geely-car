@@ -5,7 +5,7 @@ const Map = () => {
     
 
     <div>
-        <div style={{fontSize : '2.4vh',textAlign: 'start', margin : '0 0 2vh 30vh'}}>        
+        <div style={{fontSize : '2.4vh',textAlign: 'start', margin : '10vh 0 2vh 30vh'}}>        
         <p>*Предложение банка. Оформление в кредит и рассрочку доступно только при подтверждении доходов.
         <br />**Максимальная выгода при учете программы трейд-ин. Не является публичной офертой.s</p>
         </div>

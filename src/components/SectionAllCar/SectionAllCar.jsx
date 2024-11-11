@@ -222,7 +222,7 @@ const SectionAllCar = () => {
         </button>
       )}
       <div style={{ marginTop: '25vh'}}>
-  <CarRequest />
+  {/* <CarRequest/> */}
   <CarRequest2/>
   <Map/>
 </div>

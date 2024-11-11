@@ -1,57 +1,154 @@
-.InfoSection{
-    width: 100%;
+.car-info-section {
+  width: 100%;
 }
 
-.backgroundInfoSection{
-    background-color: #d8d8d8;
-    width: 70%;
-    height: 75vh;
-    border-radius: 0px 20px 20px 0px;
-    position: relative;
+.car-background-section {
+  background-color: #d8d8d8;
+  width: 70vw;
+  height: 65vh;
+  border-radius: 0px 20px 20px 0px;
+  position: relative;
 }
 
-.backgroundInfoSection img{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(38%,-50%);
-    width: 67%;
-    height: auto;
-    border-radius: 20px;
+.car-background-section .CarImageRight {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(38%,-50%);
+  width: 43vw;
+  height: auto;
+  border-radius: 20px;
+}
+
+.car-info-details {
+  margin-top: 10vh;
+  height: 30vh;
+  background-color: #f2f2f2;
+}
+
+.car-info-details ul {
+  display: flex;
+  padding: 4vh 25vh;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.car-info-details ul li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.car-info-details ul li img {
+  width: 7vw;
+  height: 6vw;
+  object-fit: contain;
+  display: block;
+}
+
+.car-info-details ul li p {
+  font-size: 2.8vh;
+  text-align: center;
+}
+
+.car-form-container {
+  bottom: 4%;
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  transform: translate(15%,25%);
+  gap: 1.5vh;
+}
+
+.car-form-container h2{
+  font-size: 4.5vh;
+}
+
+.car-form-container p {
+  font-size: 4.3vh;
+  color: aliceblue;
+  /* margin: 0 3vw 1vh; */
+  font-weight: 500;
+}
+
+.car-form-elements {
+  display: flex;
+  flex-direction: column;
+  /* margin: 0 3vw; */
+  gap: 1.7vw;
+}
+
+.car-form-elements input {
+  width: 23vw;
+  padding: 2vh 2vw;
+  font-size: 3vh;
+  border-radius: 13px;
+  outline: none;
+  border: none;
+}
+
+.car-phone-input {
+  font-family: Arial, sans-serif;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 10vh;
+  width: 25vw;
+  background-size: 25px 18px;
+  background-position: 10px center;
+  background-color: #fff;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/2d/Flag_of_Kazakhstan.svg');
+  background-repeat: no-repeat;
+}
+
+.car-phone-input::placeholder {
+  color: #ccc;
+}
+
+.car-submit-button {
+  width: 23vw;
+  padding: 2vh;
+  font-size: 2.5vh;
+  border-radius: 13px;
+  outline: none;
+  border: none;
+  background-color: #0067b2;
+  color: #fff;
 }
 
 .InfoAboutCar{
-    margin-top: 10vh;
-    height: 30vh;
-    background-color: #f2f2f2;
+  margin-top: 10vh;
+  height: 30vh;
+  background-color: #f2f2f2;
 }
 
 .InfoAboutCar ul{
-    display: flex;
-    padding: 4vh 25vh;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  padding: 4vh 25vh;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .InfoAboutCar ul li {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .InfoAboutCar ul li img {
-    width: 7vw;
-    height: 6vw;
-    object-fit: contain;
-    display: block;
+  width: 7vw;
+  height: 6vw;
+  object-fit: contain;
+  display: block;
 }
 
-
-
 .InfoAboutCar ul li p{
-    font-size: 2.8vh;
-    text-align: center;
+  font-size: 2.8vh;
+  text-align: center;
 }
