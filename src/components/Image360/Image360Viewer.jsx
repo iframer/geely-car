@@ -58,16 +58,22 @@ const Image360Viewer = ({ images }) => {
     };
 
     return (
-        <div
-            ref={viewerRef}
-            className="viewer"
-            style={{ backgroundImage: `url(${images[currentFrame]})` }}
-            onMouseDown={handleMouseDown}
-            onMouseMove={handleMouseMove}
-            onMouseUp={handleMouseUp}
-            onMouseLeave={handleMouseLeave}
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}>
+        <div className="viewer-container">
+            <div
+                ref={viewerRef}
+                className="viewer"
+                style={{ backgroundImage: `url(${images[currentFrame]})` }}
+                onMouseDown={handleMouseDown}
+                onMouseMove={handleMouseMove}
+                onMouseUp={handleMouseUp}
+                onMouseLeave={handleMouseLeave}
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}>
+            </div>
+            <div className="garantCarImage">
+                {/* Дополнительный элемент, например, логотип или текст */}
+                <img src="your-image-url-here.png" alt="Garant Car Logo" />
+            </div>
         </div>
     );
 };

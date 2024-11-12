@@ -1,6 +1,6 @@
-.CarModels ul li a img{
-    width: 17vw;
-    height: 52vh;
+.CarModels ul li a img {
+    width: 20vw;
+    height: auto;
     border-radius: 10px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
@@ -9,15 +9,14 @@
     list-style: none;
 }
 
-.CarModels{
-    padding: 0vh 13vw;
+.CarModels {
+    padding: 0vh 8vw;
 }
 
-.CarModels h1{
+.CarModels h1 {
     margin: 15vh 0 5vh 0;
     font-size: 7vh;
 }
-
 
 .CarModels ul {
     padding: 5vh 0;
@@ -25,6 +24,44 @@
     justify-content: space-around;
 }
 
-.CarModels ul li:hover{
+.image-container {
+    position: relative;
+}
 
+.image-text {
+    position: absolute;
+    top: 2vh;
+    left: 0vh;
+    color: white;
+    font-size: 4vh;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 100;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.image-btn{
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    left: 2vh;
+    border: 3px solid #fff;
+    font-size: 3vh;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 1vh 3vh;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.image-container:hover .image-text { 
+    transform: translateY(-30px); 
+    opacity: 0;
+}
+
+.image-container:hover .image-btn {
+    transform: translate(0,-30px);
+    opacity: 1;
 }
