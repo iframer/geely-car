@@ -1,0 +1,49 @@
+.FormCarRequest form{
+}
+
+
+.FormCarRequest form h2{
+    font-size: 7vh;
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.FormCarRequest form p{
+    font-size: 3.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    margin-bottom: 5vh;
+}
+
+.FormCarRequest form input{
+    width: 23vw;
+    padding: 2vh;
+    font-size: 2.5vh;
+    border-radius: 13px;
+    outline: none;
+    border: none;
+    margin-bottom: 3vh;
+}
+
+.FormCarRequest form select{
+    width: 23vw;
+    padding: 2vh;
+    font-size: 2.5vh;
+    border-radius: 13px;
+    outline: none;
+    border: none;
+    margin-bottom: 3vh;
+}
+
+.FormCarRequest form button{
+    width: 23vw;
+    padding: 2vh;
+    font-size: 2.5vh;
+    border-radius: 13px;
+    outline: none;
+    border: none;
+    background-color: #0067b2;
+    color: #fff;
+}

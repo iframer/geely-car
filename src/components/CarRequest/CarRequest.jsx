@@ -2,21 +2,19 @@ import "./CarRequest.css";
 import { useState, useEffect } from 'react';
 
 const CarRequest = () => {
-    const [phone, setPhone] = useState('+7(___) ___-__-__');
-    
+    const [phone, setPhone] = useState('');
+
     const handlePhoneInputChange = (e) => {
         let input = e.target.value.replace(/\D/g, '');
         if (input.startsWith('7')) input = input.slice(1);
-        if (input.length > 10) {
-          input = input.slice(0, 10);
-        }
+        if (input.length > 10) input = input.slice(0, 10);
 
         let formatted = '+7 (';
-        if (input.length > 0) formatted += input.slice(0, 3);
+        if (input.length >= 1) formatted += input.slice(0, 3);
         if (input.length >= 4) formatted += `) ${input.slice(3, 6)}`;
         if (input.length >= 7) formatted += `-${input.slice(6, 8)}`;
         if (input.length >= 9) formatted += `-${input.slice(8, 10)}`;
-    
+
         setPhone(formatted);
     };
 

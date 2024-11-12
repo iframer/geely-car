@@ -8,7 +8,6 @@ const images = [
 
 const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [phone, setPhone] = useState('+7(___) ___-__-__');
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -25,26 +24,21 @@ const Slider = () => {
     setCurrentIndex((currentIndex + 1) % images.length);
   };
 
-  const handlePhoneInputChange = (e) => {
-    let input = e.target.value.replace(/\D/g, ''); // Удаляем все нечисловые символы
+  const [phone, setPhone] = useState('');
 
-    // Удаляем начальный "7", если пользователь вводит его вручную
-    if (input.startsWith('7')) input = input.slice(1);
+    const handlePhoneInputChange = (e) => {
+        let input = e.target.value.replace(/\D/g, '');
+        if (input.startsWith('7')) input = input.slice(1);
+        if (input.length > 10) input = input.slice(0, 10);
 
-    // Ограничиваем длину до 10 цифр
-    if (input.length > 10) {
-      input = input.slice(0, 10);
-    }
+        let formatted = '+7 (';
+        if (input.length >= 1) formatted += input.slice(0, 3);
+        if (input.length >= 4) formatted += `) ${input.slice(3, 6)}`;
+        if (input.length >= 7) formatted += `-${input.slice(6, 8)}`;
+        if (input.length >= 9) formatted += `-${input.slice(8, 10)}`;
 
-    // Форматируем номер по шаблону
-    let formatted = '+7 (';
-    if (input.length > 0) formatted += input.slice(0, 3);
-    if (input.length >= 4) formatted += `) ${input.slice(3, 6)}`;
-    if (input.length >= 7) formatted += `-${input.slice(6, 8)}`;
-    if (input.length >= 9) formatted += `-${input.slice(8, 10)}`;
-
-    setPhone(formatted);
-  };
+        setPhone(formatted);
+    };
 
   return (
     <div className="slider">
