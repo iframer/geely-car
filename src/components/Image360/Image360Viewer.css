@@ -10,6 +10,7 @@
     margin: 0px;
     width: 50vw;
     height: 40vh;
+    transition: background-image 0.005s ease-in-out;
 }
 
 .garantCarImage {
@@ -19,6 +20,3 @@
     bottom: -20px;
     right: 0;
 }
-
-
-

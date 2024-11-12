@@ -8,7 +8,7 @@ const Image360Viewer = ({ images }) => {
     const lastMouseXRef = useRef(0);
     const sensitivity = 25;
     const totalFrames = images.length;
-  
+
     // Предварительная загрузка изображений
     useEffect(() => {
         const preloadImages = () => {
@@ -41,11 +41,14 @@ const Image360Viewer = ({ images }) => {
 
     const handleMouseUp = () => setIsDragging(false);
 
+    const handleMouseLeave = () => setIsDragging(false);
+
     const handleTouchStart = (event) => {
         lastMouseXRef.current = event.touches[0].clientX;
     };
 
     const handleTouchMove = (event) => {
+        event.preventDefault();
         const touchEndX = event.touches[0].clientX;
         const touchDelta = touchEndX - lastMouseXRef.current;
         if (Math.abs(touchDelta) > 30) {
@@ -58,14 +61,14 @@ const Image360Viewer = ({ images }) => {
         <div
             ref={viewerRef}
             className="viewer"
-            style={{ backgroundImage: `url(${images[currentFrame]})`}}
+            style={{ backgroundImage: `url(${images[currentFrame]})` }}
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
+            onMouseLeave={handleMouseLeave}
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}>
-
-            </div>
+        </div>
     );
 };
 
