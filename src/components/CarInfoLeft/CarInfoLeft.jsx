@@ -11,7 +11,7 @@ import CarInfoRight from '../CarInfoRight/CarInfoRight.jsx';
 import './CarInfoLeft.css';
 
 const CarInfoLeft = () => {
-  const data = carsData.new_coolray;
+  const data = carsData.monjaro;
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentColorIndex, setCurrentColorIndex] = useState(0);
