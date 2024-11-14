@@ -805,31 +805,31 @@ const carsData = {
         'name' : 'MONJARO',
         'price' : 16490000,
         'image': [
-            'https://optim.tildacdn.pro/tild3334-3163-4366-b339-613362353636/-/format/webp/20230517-DSC_6596.jpg',
-            'https://optim.tildacdn.pro/tild3334-6235-4331-b731-353966633166/-/format/webp/20230517-DSC_6604.jpg',
-            'https://optim.tildacdn.pro/tild3130-6331-4335-b030-363737656166/-/format/webp/20230517-DSC_6771_1.jpg',
-            'https://optim.tildacdn.pro/tild3431-6465-4434-a138-393139313365/-/format/webp/geeltui22-01.jpg',
-            'https://optim.tildacdn.pro/tild6363-6634-4137-b866-383538353235/-/format/webp/tugella3.jpg',
-            'https://optim.tildacdn.pro/tild3163-6564-4139-b238-353033643530/-/format/webp/in_61f7e53ce93a41643.jpg'
+            'https://optim.tildacdn.pro/tild3030-3736-4566-a665-386339303262/-/format/webp/DSC00417.jpg',
+            'https://optim.tildacdn.pro/tild3937-3130-4965-b063-656262323732/-/format/webp/DSC00478.jpg',
+            'https://optim.tildacdn.pro/tild6236-3632-4161-b436-363938616434/-/format/webp/DSC00461.jpg',
+            'https://optim.tildacdn.pro/tild3132-3035-4733-b563-663336353365/-/format/webp/20230520-DSC_7108.jpg',
+            'https://optim.tildacdn.pro/tild6537-3665-4232-a261-386430376532/-/format/webp/20230520-DSC_7125.jpg',
+            'https://optim.tildacdn.pro/tild3235-3864-4538-b036-633339336536/-/format/webp/20230520-DSC_7116.jpg'
         ],        'info': [
             {
-                'image': 'https://optim.tildacdn.pro/tild6466-6262-4831-b566-306364373464/-/resize/96x/-/format/webp/1.png',
-                'text': 'Полный привод 4WD + дорожный просвет 204 мм'
-            },
-            {
-                'image': 'https://optim.tildacdn.pro/tild3334-3766-4633-a232-366361366164/-/resize/96x/-/format/webp/2.png',
+                'image': 'https://optim.tildacdn.pro/tild6332-6139-4734-b938-343465616133/-/resize/96x/-/format/webp/1.png',
                 'text': '238 л.с. 2.0Т 8 АКП Aisin'
             },
             {
-                'image': 'https://optim.tildacdn.pro/tild3234-3562-4565-b865-393634393939/-/resize/96x/-/format/webp/3.png',
-                'text': 'Cистема кругового обзора 360'
+                'image': 'https://optim.tildacdn.pro/tild3030-3463-4630-b564-373639666463/-/resize/96x/-/format/webp/2.png',
+                'text': 'Полный привод 4WD + дорожный просвет 204 мм'
             },
             {
-                'image': 'https://optim.tildacdn.pro/tild6665-3839-4362-b039-336363626662/-/resize/96x/-/format/webp/4.png',
-                'text': '6.9 с до 100 км/ч'
+                'image': 'https://optim.tildacdn.pro/tild6334-6533-4634-b361-326663396666/-/resize/96x/-/format/webp/3.png',
+                'text': 'Cистема кругового обзора 360°'
             },
             {
-                'image': 'https://optim.tildacdn.pro/tild3139-3435-4437-b336-393233386265/-/resize/96x/-/format/webp/5.png',
+                'image': 'https://optim.tildacdn.pro/tild3062-3563-4232-b935-616238356536/-/resize/96x/-/format/webp/4.png',
+                'text': 'H5 режимов движения'
+            },
+            {
+                'image': 'https://optim.tildacdn.pro/tild3838-3035-4631-a666-373732386665/-/resize/96x/-/format/webp/5.png',
                 'text': 'Вентиляция передних сидений'
             },
         ],

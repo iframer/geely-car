@@ -11,7 +11,7 @@ import CarInfoRight from '../CarInfoRight/CarInfoRight.jsx';
 import './CarInfoLeft.css';
 
 const CarInfoLeft = () => {
-  const data = carsData.monjaro;
+  const data = carsData.tugella_4wd;
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentColorIndex, setCurrentColorIndex] = useState(0);
@@ -40,7 +40,7 @@ const CarInfoLeft = () => {
       <ColorSelector 
         colors={data.images_360} 
         currentColorIndex={currentColorIndex} 
-        setCurrentColorIndex={setCurrentColorIndex} 
+        setCurrentColorIndex={setCurrentColorIndex}
       />
       <ImageViewer images={data.image} openImage={(index) => openImage(index)} />
       <InfoImageRow info={data.info} />

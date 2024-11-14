@@ -70,10 +70,6 @@ const Image360Viewer = ({ images }) => {
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}>
             </div>
-            <div className="garantCarImage">
-                {/* Дополнительный элемент, например, логотип или текст */}
-                <img src="your-image-url-here.png" alt="Garant Car Logo" />
-            </div>
         </div>
     );
 };

@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 25px 0;
+    margin-top: 10px;
 }
 
 .imageViewerImage {
