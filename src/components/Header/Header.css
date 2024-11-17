@@ -44,10 +44,10 @@
 
 .mainHeader ul li button {
   padding: 1.3vh 1.9vw;
-  border-radius: 7px;
-  font-size: 2vh;
-  font-weight: 500;
-  border: 3px solid #0067b2;
+  border-radius: 1vh;
+  font-size: 1.8vh;
+  font-weight: 400;
+  border: solid #0067b2;
   color: #0067b2;
   outline: #0067b2;
   cursor: pointer;

@@ -172,12 +172,13 @@
     font-size: 2vh;
     cursor: pointer;
     border: none;
-    border-radius: 13px;
+    border-radius: 2vh;
     color: white;
   }
   
   .car-card-button-secondary {
     background-color: #02233b;
+    border-radius: 2vh;
   }
   
   .load-more-button {
@@ -187,7 +188,7 @@
     font-size: 2vh;
     cursor: pointer;
     border: none;
-    border-radius: 13px;
+    border-radius: 2vh;
     background-color: #0067b2;
     color: white;
   }
