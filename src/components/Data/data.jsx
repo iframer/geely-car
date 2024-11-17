@@ -320,7 +320,7 @@ const carsData = {
 
 
     },
-    'new_coolray' : {
+    'coolray' : {
         'name' : 'NEW COOLRAY',
         'price' : 9590000,
         'image': [
@@ -497,7 +497,7 @@ const carsData = {
         ]
 
     },
-    'atlas_4wd' : {
+    'atlas' : {
         'name' : 'ATLAS 4WD',
         'price' : 13590000,
         'image': [
@@ -649,7 +649,7 @@ const carsData = {
         ]
 
     },
-    'tugella_4wd' : {
+    'tugella' : {
         'name' : 'TUGELLA 4WD',
         'price' : 14290000,
         'image': [

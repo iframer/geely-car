@@ -34,8 +34,8 @@
 
 .CarInfoRight button{
     width: 22vw;
-    padding:2.2vh 0;
-    font-size: 2.3vh;
+    padding:2vh 0;
+    font-size: 2vh;
     border-radius: 15px;
     margin: 1vh 0;
     cursor: pointer;
@@ -74,7 +74,9 @@
     width: 100%; /* Убедитесь, что изображение занимает весь круг */
 }
 
+.CarInfoRight .btn1, .btn2, .btn3{
 
+}
 
 .CarInfoRight .btn1{
     background-color: #02233b;
@@ -83,7 +85,7 @@
 
 .CarInfoRight .btn2{
     color: #02233b;
-    font-weight: 500;
+    font-weight: 400;
     border-width: 3px;
     background-color: #ffffff;
     background-position: center center;

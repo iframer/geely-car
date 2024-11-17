@@ -11,13 +11,13 @@ import CarInfoRight from '../CarInfoRight/CarInfoRight.jsx';
 import './CarInfoLeft.css';
 
 const CarInfoLeft = () => {
-  const data = carsData.tugella_4wd;
+  const data = carsData.tugella;
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentColorIndex, setCurrentColorIndex] = useState(0);
 
   const openImage = (index) => {
-    setCurrentIndex(index);
+    setCurrentIndex(index); 
     setIsOpen(true);
   };
 
@@ -31,6 +31,7 @@ const CarInfoLeft = () => {
 
   const nextImage = () => {
     setCurrentIndex((currentIndex + 1) % data.image.length);
+
   };
 
   return (

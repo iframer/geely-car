@@ -18,11 +18,11 @@ const App = () => {
       <div>
         <Header/>
         <UnderHeader/>
-        {/* <Slider/>
+        <Slider/>
         <CarRequest/>
         <CarModels/>
-        <SectionAllCar/> */}
-    <CarInfoLeft/>  
+        <SectionAllCar/>
+      {/* <CarInfoLeft/> */}
         </div>
     </div>
   );

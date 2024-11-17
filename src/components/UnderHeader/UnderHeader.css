@@ -1,7 +1,8 @@
 .UnderHeader{
     display: flex;
     justify-content: space-between;
-    padding: 1vh 25vh;
+    padding: 1vh 17vh;
+    
 }
 
 .UnderHeader ul{
@@ -12,6 +13,7 @@
 
 .UnderHeader ul li{
     list-style: none;
-    font-size: 2vh;
+    font-size: 1.8vh;
+    font-weight: 400;
     
 }
